@@ -38,7 +38,7 @@ public class EducationDegreeDAO implements IEducationDegreeDAO {
     }
 
     @Override
-    public boolean save(EducationDegree object) {
+    public boolean add(EducationDegree object) {
         return false;
     }
 

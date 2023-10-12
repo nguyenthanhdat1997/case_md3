@@ -22,7 +22,7 @@ public class CustomerTypeService implements ICustomerTypeService {
     }
 
     @Override
-    public boolean save(CustomerType object) {
+    public boolean add(CustomerType object) {
         return false;
     }
 

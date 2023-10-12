@@ -21,10 +21,9 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public boolean save(Employee object) {
+    public boolean add(Employee object) {
         return false;
     }
-
     @Override
     public boolean update(Employee object) {
         return false;

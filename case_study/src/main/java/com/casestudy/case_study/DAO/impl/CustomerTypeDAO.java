@@ -40,9 +40,10 @@ public class CustomerTypeDAO implements ICustomerTypeDAO {
     }
 
     @Override
-    public boolean save(CustomerType object) {
+    public boolean add(CustomerType object) {
         return false;
     }
+
 
     @Override
     public boolean update(CustomerType object) {

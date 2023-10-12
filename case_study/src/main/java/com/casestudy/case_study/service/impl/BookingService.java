@@ -5,6 +5,8 @@ import com.casestudy.case_study.DAO.impl.BookingDAO;
 import com.casestudy.case_study.model.Booking;
 import com.casestudy.case_study.service.IBookingService;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -25,44 +27,18 @@ public class BookingService implements IBookingService {
     }
 
     @Override
-    public boolean save(Booking object) {
-        return bookingDAO.save(object);
+    public boolean add(Booking booking) {
+        return bookingDAO.add(booking);
     }
 
     @Override
-    public boolean update(Booking object) {
-        return bookingDAO.update(object);
+    public boolean update(Booking booking) {
+        return bookingDAO.update(booking);
     }
 
     @Override
     public boolean remove(Long id) {
-        return false;
+        return bookingDAO.remove(id);
     }
 
-    @Override
-    public boolean addBooking(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        IBookingService bookingService = new BookingService();
-        String book_time = request.getParameter("book_time");
-
-        String status = request.getParameter("status");
-        Long customer_id = Long.valueOf(request.getParameter("customer_id"));
-        Long employee_id = Long.valueOf(request.getParameter("employee_id"));
-        Booking booking = new Booking(book_time,status,customer_id,employee_id);
-        boolean success = bookingService.save(booking);
-        if (success){
-                response.sendRedirect(request.getContextPath() + "/bookings?action=list");
-            }
-        return false;
-    }
-
-    @Override
-    public boolean updateBooking(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Long id = Long.valueOf(request.getParameter("id"));
-        String book_time = request.getParameter("book_time");
-        String status = request.getParameter("status");
-        Long customer_id = Long.valueOf(request.getParameter("customer_id"));
-        Long employee_id = Long.valueOf(request.getParameter("employee_id"));
-
-        return false;
-    }
 }

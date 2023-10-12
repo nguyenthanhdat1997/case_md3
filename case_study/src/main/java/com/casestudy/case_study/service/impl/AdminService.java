@@ -21,7 +21,7 @@ public class AdminService implements IAdminService {
     }
 
     @Override
-    public boolean save(Admin object) {
+    public boolean add(Admin object) {
         return false;
     }
 

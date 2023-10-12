@@ -20,7 +20,7 @@ public class RoleService implements IRoleService {
     }
 
     @Override
-    public boolean save(Role object) {
+    public boolean add(Role object) {
         return false;
     }
 

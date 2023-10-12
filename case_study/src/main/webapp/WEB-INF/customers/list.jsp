@@ -17,6 +17,10 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<td class="text-center">
+    <a href="${pageContext.request.contextPath}/customers?action=create" class="btn btn-info">Create
+        Customer</a>
+</td>
 <table class="table table-dark table-striped">
     <thead>
     <tr>
@@ -29,10 +33,13 @@
         <th>Email</th>
         <th>Address</th>
         <th>Type customer</th>
-        <th>Type id</th>
+        <th>User name</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
+
         <c:forEach var="customer" items="${customerList}">
             <tr>
                 <td><c:out value="${customer.id}"></c:out></td>
@@ -53,6 +60,22 @@
                         <td><c:out value="${user.user_name}"></c:out></td>
                     </c:if>
                 </c:forEach>
+
+                <td class="text-center">
+                    <a href="${pageContext.request.contextPath}/customers?action=update&id=${customer.getId()}"
+                       class="btn btn-info">
+                        <span class="fa-solid fa-user-pen text-primary h4 m-auto"></span>
+                        update
+                    </a>
+                </td>
+
+                <td class="text-center">
+                    <a href="${pageContext.request.contextPath}/customers?action=remove&id=${customer.getId()}"
+                       class="btn btn-info">
+                        <span class="fa-solid fa-user-pen text-primary h4 m-auto"></span>
+                        delete
+                    </a>
+                </td>
             </tr>
         </c:forEach>
     </tbody>

@@ -6,7 +6,7 @@ public class Customer {
     private Long id;
     private String name;
     private String gender;
-    private Date date_of_birth;
+    private String date_of_birth;
     private String id_card;
     private String phone_number;
     private String email;
@@ -40,11 +40,11 @@ public class Customer {
         this.gender = gender;
     }
 
-    public Date getDate_of_birth() {
+    public String getDate_of_birth() {
         return date_of_birth;
     }
 
-    public void setDate_of_birth(Date date_of_birth) {
+    public void setDate_of_birth(String date_of_birth) {
         this.date_of_birth = date_of_birth;
     }
 
@@ -96,8 +96,20 @@ public class Customer {
         this.user_id = user_id;
     }
 
-    public Customer(Long id, String name, String gender, Date date_of_birth, String id_card, String phone_number, String email, String address, Long customer_type_id, Long user_id) {
+    public Customer(Long id, String name, String gender, String date_of_birth, String id_card, String phone_number, String email, String address, Long customer_type_id, Long user_id) {
         this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.date_of_birth = date_of_birth;
+        this.id_card = id_card;
+        this.phone_number = phone_number;
+        this.email = email;
+        this.address = address;
+        this.customer_type_id = customer_type_id;
+        this.user_id = user_id;
+    }
+
+    public Customer(String name, String gender, String date_of_birth, String id_card, String phone_number, String email, String address, Long customer_type_id, Long user_id) {
         this.name = name;
         this.gender = gender;
         this.date_of_birth = date_of_birth;

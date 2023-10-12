@@ -20,7 +20,7 @@ public class EducationDegreeService implements IEducationDegreeService {
     }
 
     @Override
-    public boolean save(EducationDegree object) {
+    public boolean add(EducationDegree object) {
         return false;
     }
 

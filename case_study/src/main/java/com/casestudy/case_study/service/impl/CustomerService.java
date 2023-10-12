@@ -17,21 +17,21 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public Customer findById(Long id) {
-        return null;
+        return customerDAO.findById(id);
     }
 
     @Override
-    public boolean save(Customer object) {
-        return false;
+    public boolean add(Customer object) {
+        return customerDAO.add(object);
     }
 
     @Override
     public boolean update(Customer object) {
-        return false;
+        return customerDAO.update(object);
     }
 
     @Override
     public boolean remove(Long id) {
-        return false;
+        return customerDAO.remove(id);
     }
 }

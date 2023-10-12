@@ -39,10 +39,9 @@ public class RoleDAO implements IRoleDAO {
     }
 
     @Override
-    public boolean save(Role object) {
+    public boolean add(Role object) {
         return false;
     }
-
     @Override
     public boolean update(Role object) {
         return false;

@@ -21,7 +21,7 @@ public class DepartmentService implements IDepartmentService {
     }
 
     @Override
-    public boolean save(Department object) {
+    public boolean add(Department object) {
         return false;
     }
 

@@ -20,10 +20,9 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public boolean save(User object) {
+    public boolean add(User object) {
         return false;
     }
-
     @Override
     public boolean update(User object) {
         return false;

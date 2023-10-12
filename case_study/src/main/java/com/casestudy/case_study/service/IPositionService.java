@@ -7,5 +7,4 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface IPositionService extends IUtilService<Position> {
-    boolean addPosition(HttpServletRequest request, HttpServletResponse response);
 }

@@ -11,6 +11,7 @@ import java.util.List;
 
 public class PositionService implements IPositionService {
     private final IPositionDAO positionDAO = new PositionDAO();
+
     @Override
     public List<Position> findAll() {
         return positionDAO.findAll();
@@ -22,8 +23,8 @@ public class PositionService implements IPositionService {
     }
 
     @Override
-    public boolean save(Position object) {
-        return positionDAO.save(object);
+    public boolean add(Position object) {
+        return positionDAO.add(object);
     }
 
     @Override
@@ -36,10 +37,5 @@ public class PositionService implements IPositionService {
         return false;
     }
 
-    @Override
-    public boolean addPosition(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("name");
-        Position position = new Position(name);
-        return save(position);
-    }
+
 }

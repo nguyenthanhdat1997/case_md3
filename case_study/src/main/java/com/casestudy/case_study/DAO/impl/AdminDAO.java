@@ -42,7 +42,7 @@ public class AdminDAO implements IAdminDAO {
     }
 
     @Override
-    public boolean save(Admin object) {
+    public boolean add(Admin object) {
         return false;
     }
 

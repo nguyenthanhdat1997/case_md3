@@ -18,7 +18,6 @@
 </head>
 <body>
 <h1 class="text-center">Product List</h1>
-<a href="${pageContext.request.contextPath}/positions?action=create" class="btn btn-info">Create Position</a>
 <table class="table table-dark table-striped">
     <thead>
     <tr>
@@ -31,16 +30,6 @@
         <tr>
             <td><c:out value="${position.id}"></c:out></td>
             <td><c:out value="${position.name}"></c:out></td>
-<%--            <td class="text-center">--%>
-<%--                <a href="${pageContext.request.contextPath}/positions?action=edit&id=${position.id}">--%>
-<%--                    <span class="fa-solid fa-user-pen text-primary h4 m-auto"></span>--%>
-<%--                </a>--%>
-<%--            </td>--%>
-<%--            <td>--%>
-<%--                <a class="btn btn-danger" href="${pageContext.request.contextPath}/positions?action=delete&id=${position.id}">--%>
-<%--                    <i class="fa-solid fa-trash-can"></i>--%>
-<%--                </a>--%>
-<%--            </td>--%>
         </tr>
     </c:forEach>
     </tbody>

@@ -18,7 +18,10 @@
 </head>
 <body>
 <h1 class="text-center">Product List</h1>
-<a href="${pageContext.request.contextPath}/bookings?action=create" class="btn btn-info">Create Booking</a>
+<td class="text-center">
+    <a href="${pageContext.request.contextPath}/bookings?action=create" class="btn btn-info">Create
+        Booking</a>
+</td>
 <table class="table table-dark table-striped">
     <thead>
     <tr>
@@ -27,6 +30,8 @@
         <th>Status</th>
         <th>Customer</th>
         <TH>Employee</TH>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -45,9 +50,28 @@
                     <td><c:out value="${employee.name}"></c:out></td>
                 </c:if>
             </c:forEach>
+            <td class="text-center">
+                <a href="${pageContext.request.contextPath}/bookings?action=update&id=${booking.getId()}"
+                   class="btn btn-info">
+                    <span class="fa-solid fa-user-pen text-primary h4 m-auto"></span>
+                    update
+                </a>
+            </td>
+
+            <td class="text-center">
+                <a href="${pageContext.request.contextPath}/bookings?action=remove&id=${booking.getId()}"
+                   class="btn btn-info">
+                    <span class="fa-solid fa-user-pen text-primary h4 m-auto"></span>
+                    delete
+                </a>
+            </td>
+
         </tr>
+
     </c:forEach>
+
     </tbody>
+
 </table>
 </body>
 </html>

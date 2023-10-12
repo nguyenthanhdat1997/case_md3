@@ -7,7 +7,7 @@ import java.util.List;
 public interface BaseDAO<E> {
     List<E> findAll();
     E findById(Long id);
-    boolean save(E object);
+    boolean add(E object);
     boolean update(E object);
     boolean remove(Long id);
 }

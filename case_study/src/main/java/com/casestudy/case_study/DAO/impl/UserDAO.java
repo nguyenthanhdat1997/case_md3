@@ -39,7 +39,7 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public boolean save(User object) {
+    public boolean add(User object) {
         return false;
     }
 

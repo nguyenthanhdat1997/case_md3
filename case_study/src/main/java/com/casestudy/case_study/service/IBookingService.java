@@ -7,6 +7,5 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public interface IBookingService extends IUtilService<Booking> {
-    boolean addBooking(HttpServletRequest request,HttpServletResponse response) throws IOException;
-    boolean updateBooking(HttpServletRequest request,HttpServletResponse response) throws IOException;
+
 }

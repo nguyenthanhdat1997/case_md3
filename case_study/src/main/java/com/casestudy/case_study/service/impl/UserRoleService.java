@@ -20,7 +20,7 @@ public class UserRoleService implements IUserRoleService {
     }
 
     @Override
-    public boolean save(UserRole object) {
+    public boolean add(UserRole object) {
         return false;
     }
 

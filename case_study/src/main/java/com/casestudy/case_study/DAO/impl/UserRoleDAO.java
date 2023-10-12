@@ -37,7 +37,7 @@ public class UserRoleDAO implements IUserRoleDAO {
     }
 
     @Override
-    public boolean save(UserRole object) {
+    public boolean add(UserRole object) {
         return false;
     }
 

@@ -38,18 +38,7 @@ public class PositionDAO implements IPositionDAO {
     }
 
     @Override
-    public boolean save(Position object) {
-        Connection connection = JDBCConnection.getConnection();
-
-        try {
-            PreparedStatement statement = connection.prepareStatement(INSERT);
-            statement.setString(1, object.getName());
-            int num = statement.executeUpdate();
-            return num == 1;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public boolean add(Position object) {return false;}
 
     @Override
     public boolean update(Position object) {

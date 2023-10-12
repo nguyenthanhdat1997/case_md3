@@ -52,7 +52,7 @@ public class EmployeeDAO implements IEmployeeDAO {
     }
 
     @Override
-    public boolean save(Employee object) {
+    public boolean add(Employee object) {
         return false;
     }
 

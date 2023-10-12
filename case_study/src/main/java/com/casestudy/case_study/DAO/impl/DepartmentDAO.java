@@ -40,9 +40,10 @@ public class DepartmentDAO implements IDepartmentDAO {
     }
 
     @Override
-    public boolean save(Department object) {
+    public boolean add(Department object) {
         return false;
     }
+
 
     @Override
     public boolean update(Department object) {
