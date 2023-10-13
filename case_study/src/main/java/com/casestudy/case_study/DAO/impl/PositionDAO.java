@@ -14,6 +14,7 @@ import java.util.List;
 public class PositionDAO implements IPositionDAO {
     private final String SELECT_ALL_POSITION = "select * from positions where is_delete = 0";
     private final String INSERT = "insert into positions(name) values(?);";
+
     @Override
     public List<Position> findAll() {
         List<Position> positions = new ArrayList<>();
@@ -21,13 +22,13 @@ public class PositionDAO implements IPositionDAO {
         try {
             PreparedStatement statement = connection.prepareStatement(SELECT_ALL_POSITION);
             ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
-                positions.add(new Position(id,name));
+                positions.add(new Position(id, name));
             }
         } catch (SQLException e) {
-            System.out.printf(e.getMessage());
+            e.printStackTrace();
         }
         return positions;
     }
@@ -38,7 +39,9 @@ public class PositionDAO implements IPositionDAO {
     }
 
     @Override
-    public boolean add(Position object) {return false;}
+    public boolean add(Position object) {
+        return false;
+    }
 
     @Override
     public boolean update(Position object) {

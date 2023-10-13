@@ -18,6 +18,10 @@
     <title>Employees</title>
 </head>
 <body>
+<td class="text-center">
+    <a href="${pageContext.request.contextPath}/employees?action=create" class="btn btn-info">Create
+        Employee</a>
+</td>
 <table class="table table-dark table-striped">
     <thead>
     <tr>
@@ -30,6 +34,10 @@
         <th>Email</th>
         <th>Address</th>
         <th>Salary</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Education Degree</th>
+        <th>User</th>
     </tr>
     </thead>
     <tbody>
@@ -44,6 +52,28 @@
             <td><c:out value="${employee.email}"></c:out></td>
             <td><c:out value="${employee.address}"></c:out></td>
             <td><c:out value="${employee.salary}"></c:out></td>
+
+            <c:forEach items="${positionList}" var="position" >
+                <c:if test="${employee.position_id == position.id}">
+                    <td>${position.name}</td>
+                </c:if>
+            </c:forEach>
+            <c:forEach items="${departmentList}" var="department" >
+                <c:if test="${department.id == employee.department_id}">
+                    <td>${department.name}</td>
+                </c:if>
+            </c:forEach>
+            <c:forEach items="${educationDegreeList}" var="educationDegree" >
+                <c:if test="${educationDegree.id == employee.education_degree_id}">
+                    <td>${educationDegree.name}</td>
+                </c:if>
+            </c:forEach>
+            <c:forEach items="${userList}" var="user">
+                <c:if test="${user.id == employee.user_id}">
+                    <td>${user.user_name}</td>
+                </c:if>
+            </c:forEach>
+
         </tr>
     </c:forEach>
     </tbody>

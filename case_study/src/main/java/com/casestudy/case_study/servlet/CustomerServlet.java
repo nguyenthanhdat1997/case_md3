@@ -105,14 +105,10 @@ public class CustomerServlet extends HttpServlet{
 
 
     private void listCustomer(HttpServletRequest request, HttpServletResponse response) {
-        List<Customer> customers = customerService.findAll();
-        List<CustomerType> customerTypes = customerTypeService.findAll();
-        List<User> users = userService.findAll();
-
         try {
-            request.setAttribute("customerList",customers);
-            request.setAttribute("customerTypeList",customerTypes);
-            request.setAttribute("userList",users);
+            request.setAttribute("customerList",customerService.findAll());
+            request.setAttribute("customerTypeList",customerTypeService.findAll());
+            request.setAttribute("userList",userService.findAll());
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/customers/list.jsp");
             dispatcher.forward(request,response);
         } catch (ServletException | IOException e) {

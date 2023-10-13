@@ -17,12 +17,12 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public Employee findById(Long id) {
-        return null;
+        return employeeDAO.findById(id);
     }
 
     @Override
     public boolean add(Employee object) {
-        return false;
+        return employeeDAO.add(object);
     }
     @Override
     public boolean update(Employee object) {

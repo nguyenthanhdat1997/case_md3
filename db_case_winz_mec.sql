@@ -137,7 +137,7 @@ create table employees(
 id int primary key not null auto_increment,
 `name` varchar(45),
 gender varchar(10),
-date_of_birth date,
+date_of_birth varchar(45),
 id_card varchar(20),
 phone_number varchar(20),
 email varchar(45),
@@ -159,7 +159,7 @@ values("Tào Nhân","nam","1998-01-08","7346523","82364876","taonhan@gmail.com",
 insert into employees(`name`,gender,date_of_birth,id_card,phone_number,email,address,salary,position_id,department_id,education_degree_id,user_id) 
 values("Hoàng Trung","nam","2010-02-20","7346523","82364876","hoangtrung@gmail.com","Sơn La",1000000,2,2,1,5);
 insert into employees(`name`,gender,date_of_birth,id_card,phone_number,email,address,salary,position_id,department_id,education_degree_id,user_id) 
-values("Hoàng Thượng","nam","1998-01-29","7346523","82364876","hoangthuong@gmail.com","Đà Lạt",1500000,3,3,6,2);
+values("Hoàng Thượng","nam","1998-01-29","7346523","82364876","hoangthuong@gmail.com","Đà Lạt",1500000,2,3,6,2);
 insert into employees(`name`,gender,date_of_birth,id_card,phone_number,email,address,salary,position_id,department_id,education_degree_id,user_id) 
 values("Bàng Thống","nam","1998-01-17","7346523","82364876","bangthong@gmail.com","Đắk lắk",900000,3,4,6,3);
 insert into employees(`name`,gender,date_of_birth,id_card,phone_number,email,address,salary,position_id,department_id,education_degree_id,user_id) 

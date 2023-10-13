@@ -14,6 +14,7 @@ import java.util.List;
 
 public class EducationDegreeDAO implements IEducationDegreeDAO {
     private final String SELECT_ALL_EDUCATION_DEGREE = "select * from education_degrees where is_delete = 0";
+
     @Override
     public List<EducationDegree> findAll() {
         List<EducationDegree> educationDegrees = new ArrayList<>();
@@ -21,13 +22,13 @@ public class EducationDegreeDAO implements IEducationDegreeDAO {
         try {
             PreparedStatement statement = connection.prepareStatement(SELECT_ALL_EDUCATION_DEGREE);
             ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
-                educationDegrees.add(new EducationDegree(id,name));
+                educationDegrees.add(new EducationDegree(id, name));
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return educationDegrees;
     }

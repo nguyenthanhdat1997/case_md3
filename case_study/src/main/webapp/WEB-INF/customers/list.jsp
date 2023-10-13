@@ -50,6 +50,7 @@
                 <td><c:out value="${customer.phone_number}"></c:out></td>
                 <td><c:out value="${customer.email}"></c:out></td>
                 <td><c:out value="${customer.address}"></c:out></td>
+
                 <c:forEach var="customerType" items="${customerTypeList}">
                     <c:if test="${customer.customer_type_id == customerType.id}">
                         <td><c:out value="${customerType.name}"></c:out></td>
