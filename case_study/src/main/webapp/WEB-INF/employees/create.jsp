@@ -26,7 +26,7 @@
                 <label for="name">FullName</label>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="gender" type="checkbox" name="gender">
+                <input class="form-control" id="gender" type="text" name="gender">
                 <label for="gender">Gender</label>
             </div>
             <div class="form-floating mb-3">
@@ -54,11 +54,33 @@
                 <label for="salary">Salary</label>
             </div>
             <div class="form-floating mb-3">
-                <select name="customer_type_id" class="form-select" aria-label="Default select example"
+                <select name="position_id" class="form-select" aria-label="Default select example"
                         style="padding: 0 20px">
-                    <c:forEach var="customerType" items="${customerTypeList}">
-                        <option value="${customerType.id}">
-                                ${customerType.name}
+
+                    <c:forEach var="position" items="${positionList}">
+                        <option value="${position.id}">
+                                ${position.name}
+                        </option>
+                    </c:forEach>
+                </select>
+            </div>
+            <div class="form-floating mb-3">
+                <select name="department_id" class="form-select" aria-label="Default select example"
+                        style="padding: 0 20px">
+                    <c:forEach var="department" items="${departmentList}">
+                        <option value="${department.id}">
+                                ${department.name}
+                        </option>
+                    </c:forEach>
+                </select>
+            </div>
+            <div class="form-floating mb-3">
+
+                <select name="education_degree_id" class="form-select" aria-label="Default select example"
+                        style="padding: 0 20px">
+                    <c:forEach var="educationDegree" items="${educationDegreeList}">
+                        <option value="${educationDegree.id}">
+                                ${educationDegree.name}
                         </option>
                     </c:forEach>
                 </select>
@@ -72,7 +94,6 @@
                         </option>
                     </c:forEach>
                 </select>
-
             </div>
 
             <button class="btn btn-lg btn-success" type="submit" value="create">Create</button>

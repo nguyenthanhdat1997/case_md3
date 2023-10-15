@@ -116,7 +116,7 @@ public class CustomerServlet extends HttpServlet{
         }
     }
     private void addNewCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("name");
+        String name =  request.getParameter("name");
         String gender = request.getParameter("gender");
         String date_of_birth = request.getParameter("date_of_birth");
         String id_card = request.getParameter("id_card");
@@ -162,7 +162,7 @@ public class CustomerServlet extends HttpServlet{
             request.setAttribute("mess", mess);
             request.setAttribute("check", check);
             try {
-                response.sendRedirect(request.getContextPath() + "/bookings?action=list");
+                response.sendRedirect(request.getContextPath() + "/customers?action=list");
 
             } catch (IOException e) {
                 e.printStackTrace();

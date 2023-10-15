@@ -1,0 +1,8 @@
+{
+  "name": "main",
+  "version": "1.0.0",
+  "dependencies": {
+    "antd": "5.10.0",
+    "react": "^18.2.0"
+  }
+}

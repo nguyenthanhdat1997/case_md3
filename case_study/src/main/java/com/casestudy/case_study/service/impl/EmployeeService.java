@@ -26,11 +26,11 @@ public class EmployeeService implements IEmployeeService {
     }
     @Override
     public boolean update(Employee object) {
-        return false;
+        return employeeDAO.update(object);
     }
 
     @Override
     public boolean remove(Long id) {
-        return false;
+        return employeeDAO.remove(id);
     }
 }

@@ -16,7 +16,6 @@ public class CustomerDAO implements ICustomerDAO {
 
     private final String SELECT_ALL_CUSTOMER = "select * from customers where is_delete = 0";
     private final String SELECT_BY_ID = "select * from customers where id = ?";
-
     private final String INSERT = "insert into customers(name,gender,date_of_birth,id_card,phone_number,email,address,customer_type_id,user_id) values(?,?,?,?,?,?,?,?,?); ";
     private final String DELETE = "update customers set is_delete = 1 where id = ?";
     private final String UPDATE = "update customers set name = ?, gender =?, date_of_birth = ?, id_card = ?, phone_number = ?, email = ?, address = ?, customer_type_id = ?, user_id = ? where id = ?";
@@ -116,6 +115,8 @@ public class CustomerDAO implements ICustomerDAO {
             statement.setLong(8, customer.getCustomer_type_id());
             statement.setLong(9, customer.getUser_id());
             statement.setLong(10, customer.getId());
+            rowUpdated = statement.executeUpdate() > 0;
+            return rowUpdated;
         } catch (SQLException e) {
             e.printStackTrace();
         }

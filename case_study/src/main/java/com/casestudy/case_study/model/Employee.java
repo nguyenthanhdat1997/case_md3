@@ -154,4 +154,19 @@ public class Employee {
         this.department_id = department_id;
         this.education_degree_id = education_degree_id;
     }
+
+    public Employee(String name, String gender, String date_of_birth, String id_card, String phone_number, String email, String address, double salary, Long position_id, Long department_id, Long education_degree_id, Long user_id) {
+        this.name = name;
+        this.gender = gender;
+        this.date_of_birth = date_of_birth;
+        this.id_card = id_card;
+        this.phone_number = phone_number;
+        this.email = email;
+        this.address = address;
+        this.salary = salary;
+        this.position_id = position_id;
+        this.department_id = department_id;
+        this.education_degree_id = education_degree_id;
+        this.user_id = user_id;
+    }
 }
